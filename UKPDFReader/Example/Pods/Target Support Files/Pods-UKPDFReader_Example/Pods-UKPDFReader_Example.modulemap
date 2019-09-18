@@ -1,0 +1,6 @@
+framework module Pods_UKPDFReader_Example {
+  umbrella header "Pods-UKPDFReader_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
