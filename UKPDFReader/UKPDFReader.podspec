@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   #s.platform      = :ios, '11.0'
   s.ios.deployment_target = '11.0'
   #s.source_files = 'UKPDFReader/Classes/**/*'
-  s.source_files = ['*.swift']
+  s.source_files = '*.swift'
   
   s.frameworks = 'UIKit', 'PDFKit'
   # s.resource_bundles = {
