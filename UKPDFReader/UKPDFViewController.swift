@@ -35,6 +35,7 @@ public class UKPDFViewController: UIViewController {
     }
     
     public var showContentsButton: Bool = true
+    public var showThumbnailView: Bool = false
     public var pdfTitle: String = "" {
         willSet {
             self.title = newValue
@@ -68,7 +69,10 @@ public class UKPDFViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(back))
         
         self.setupPDFView()
-        setupThumbnailView()
+        
+        if showThumbnailView {
+            setupThumbnailView()
+        }
         
         // Add page changed listener
         NotificationCenter.default.addObserver(
@@ -102,10 +106,12 @@ public class UKPDFViewController: UIViewController {
         super.viewDidLayoutSubviews()
         pdfView.frame = view.safeAreaLayoutGuide.layoutFrame
         
-        let thumbanilHeight: CGFloat = Device_Height * 0.15
-        thumbnailView.translatesAutoresizingMaskIntoConstraints = false
-        view.addConstraintsWithFormat(format: "H:|[v0]|", views: thumbnailView)
-        view.addConstraintsWithFormat(format: "V:[v0(\(thumbanilHeight))]|", views: thumbnailView)
+        if showThumbnailView {
+            let thumbanilHeight: CGFloat = Device_Height * 0.15
+            thumbnailView.translatesAutoresizingMaskIntoConstraints = false
+            view.addConstraintsWithFormat(format: "H:|[v0]|", views: thumbnailView)
+            view.addConstraintsWithFormat(format: "V:[v0(\(thumbanilHeight))]|", views: thumbnailView)
+        }
     }
     
     /*

@@ -1,6 +1,0 @@
-framework module UKPDFReader {
-  umbrella header "UKPDFReader-umbrella.h"
-
-  export *
-  module * { export * }
-}
