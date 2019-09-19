@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         //optional values
         pdfViewController.pdfDisplayDirection = .horizontal
         pdfViewController.showContentsButton = true
+        pdfViewController.showThumbnailView = false
         pdfViewController.pdfTitle = "UKPdfReader"
         
         pdfViewController.customizeNavBar(titleTextcolor: .red, titleFont: UIFont.boldSystemFont(ofSize: 24.0), buttonTextcolor: .blue, buttonFont: UIFont.boldSystemFont(ofSize: 18.0))
