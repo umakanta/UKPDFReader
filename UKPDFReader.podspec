@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UKPDFReader'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'UKPDFReader is a simple framework for reading PDF in iOS(>=11.0)'
 
 # This description is used to generate tags and improve search results.
